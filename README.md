@@ -52,16 +52,16 @@ secKey是用户密钥
 - path: api/createTransferTxData
 - method: POST
 - data: {
-    apiKey: 用户apiKey | 必填
-    chain: 链 | 必填 | CHATNS
-    coin: 币种 | 必填 | COINS
-    erc20Address: 合约地址 | ERC20必填 
-    from: 转账发送者 | ETH必填
-    to: 收款地址 | 选填 |
-    value: 收款地址 | 选填 |
-    gasPrice: ETH燃气费 | ETH链有效，选填  如果是个位数时表示档位，如慢中快，待具体设计
-    feeRate: BTC/LTC/USDT 费率 | BTC/LTC/USDT必填 |
-    signture: 签名 | 必填 | 使用代理则由代理完成签名
+    - apiKey: 用户apiKey | 必填
+    - chain: 链 | 必填 | CHATNS
+    - coin: 币种 | 必填 | COINS
+    - erc20Address: 合约地址 | ERC20必填 
+    - from: 转账发送者 | ETH必填
+    - to: 收款地址 | 选填 |
+    - value: 收款地址 | 选填 |
+    - gasPrice: ETH燃气费 | ETH链有效，选填  如果是个位数时表示档位，如慢中快，待具体设计
+    - feeRate: BTC/LTC/USDT 费率 | BTC/LTC/USDT必填 |
+    - signture: 签名 | 必填 | 使用代理则由代理完成签名
 }
 
 - response
