@@ -81,12 +81,12 @@ secKey是用户密钥
 - path: api/signAndSubmitTokenDeploy
 - method: POST
 - data: {
-    apiKey: 用户apiKey | 必填
-    chain: 链 | 必填 | CHATNS
-    txData: 事物数据 | 必填 |
-    privateKey: 用户私钥 | 必填 |
-    requestId: createTransferTxData返回的requestId | 必填 |
-    signture: 签名 | 必填 | 使用代理则由代理完成签名
+    - apiKey: 用户apiKey | 必填
+    - chain: 链 | 必填 | CHATNS
+    - txData: 事物数据 | 必填 |
+    - privateKey: 用户私钥 | 必填 |
+    - requestId: createTransferTxData返回的requestId | 必填 |
+    - signture: 签名 | 必填 | 使用代理则由代理完成签名
 }
 - response
 ```
@@ -101,11 +101,11 @@ secKey是用户密钥
 - path: api/signAndSubmitTransfer
 - method: POST
 - data: {
-    apiKey: 用户apiKey | 必填 |
-    chain: 链 | 必填 | CHATNS
-    signedTxData: 签名后事物数据 | 必填 |
-    requestId: createTransferTxData求返回的requestId | 选填
-    signture: 签名 | 必填 | 使用代理则由代理完成签名
+    - apiKey: 用户apiKey | 必填 |
+    - chain: 链 | 必填 | CHATNS
+    - signedTxData: 签名后事物数据 | 必填 |
+    - requestId: createTransferTxData求返回的requestId | 选填
+    - signture: 签名 | 必填 | 使用代理则由代理完成签名
 }
 
 - response
@@ -122,10 +122,10 @@ secKey是用户密钥
 - path: api/subscribe
 - method: POST
 - data: {
-    apiKey: 用户apiKey | 必填
-    addresses: 订阅地址列表，逗号分割 | 必填
-    chain: 链 | 必填 | CHATNS
-    signture: 签名 | 必填 | 使用代理则由代理完成签名
+    - apiKey: 用户apiKey | 必填
+    - addresses: 订阅地址列表，逗号分割 | 必填
+    - chain: 链 | 必填 | CHATNS
+    - signture: 签名 | 必填 | 使用代理则由代理完成签名
 }
 - response
 ```
@@ -144,13 +144,13 @@ secKey是用户密钥
 
 - path: api/getBalance
 - method: GET
-- data: {
-    apiKey: 用户apiKey | 必填
-    address: 地址 | 必填
-    chain: 链 | 必填 | 
-    coin: 币种 | 选填 | CHATNS
-    tokenAddress: 合约地址 | ERC20必填 
-    signture: 签名 | 必填 | 使用代理则由代理完成签名
+- query: {
+    - apiKey: 用户apiKey | 必填
+    - address: 地址 | 必填
+    - chain: 链 | 必填 | 
+    - coin: 币种 | 选填 | CHATNS
+    - tokenAddress: 合约地址 | ERC20必填 
+    - signture: 签名 | 必填 | 使用代理则由代理完成签名
 }
 - response
 ```
@@ -170,15 +170,15 @@ secKey是用户密钥
 
 - path: api/history
 - method: GET
-- data: {
-    apiKey: 用户apiKey | 必填
-    address: 地址 | 必填
-    chain: 链 | 必填 | CHATNS
-    coin: 币 | 必填 | COINS
-    tokenKey:  token唯一标识 ERC20合约地址 VCT为token名 | 当查询token转账记录时必填 |
-    pageIndex: 页码 | 选填 |
-    pageSize: 条数 | 选填 |
-    signture: 签名 | 必填 | 使用代理则由代理完成签名
+- query: {
+    - apiKey: 用户apiKey | 必填
+    - address: 地址 | 必填
+    - chain: 链 | 必填 | CHATNS
+    - coin: 币 | 必填 | COINS
+    - tokenKey:  token唯一标识 ERC20合约地址 VCT为token名 | 当查询token转账记录时必填 |
+    - pageIndex: 页码 | 选填 |
+    - pageSize: 条数 | 选填 |
+    - signture: 签名 | 必填 | 使用代理则由代理完成签名
 }
 - response 
 ```
@@ -197,13 +197,13 @@ secKey是用户密钥
 
 - path: api/tokens/list
 - method: GET
-- data: {
-    apiKey: 用户apiKey | 必填
-    chain: 链 | 必填 | CHATNS
-    coin: 币 | 选填 | 
-    pageIndex: 页码 | 选填
-    pageSize: 条数 | 选填
-    signture: 签名 | 必填 | 使用代理则由代理完成签名
+- query: {
+    - apiKey: 用户apiKey | 必填
+    - chain: 链 | 必填 | CHATNS
+    - coin: 币 | 选填 | 
+    - pageIndex: 页码 | 选填
+    - pageSize: 条数 | 选填
+    - signture: 签名 | 必填 | 使用代理则由代理完成签名
 }
 - response 
 ```
@@ -228,14 +228,14 @@ secKey是用户密钥
 - path: api/createTokenTxData
 - method: POST
 - data: {
-    apiKey: 用户apiKey | 必填
-    chain: 链 | 必填 | CHATNS
-    coin: 币 | 必填 | COIN_TOKEN
-    name: Token名 | 必填 |
-    symbol: Token简称 | 必填 |
-    amount: 发币总量 | 必填 |
-    owner: Token发布者 | ETH必填 |
-    signture: 签名 | 必填 | 使用代理则由代理完成签名
+    - apiKey: 用户apiKey | 必填
+    - chain: 链 | 必填 | CHATNS
+    - coin: 币 | 必填 | COIN_TOKEN
+    - name: Token名 | 必填 |
+    - symbol: Token简称 | 必填 |
+    - amount: 发币总量 | 必填 |
+    - owner: Token发布者 | ETH必填 |
+    - signture: 签名 | 必填 | 使用代理则由代理完成签名
 }
 - response 返回事务需要参数及requestId
 ```
@@ -254,12 +254,12 @@ secKey是用户密钥
 - path: api/signAndSubmitTokenDeploy
 - method: POST
 - data: {
-    apiKey: 用户apiKey | 必填
-    chain: 链 | 必填 | CHATNS
-    txData: 签名后事物数据 | 必填 |
-    privateKey: 用户私钥 | 必填 |
-    requestId: createTokenTxData返回的requestId | 必填 |
-    signture: 签名 | 必填 | 使用代理则由代理完成签名
+    - apiKey: 用户apiKey | 必填
+    - chain: 链 | 必填 | CHATNS
+    - txData: 签名后事物数据 | 必填 |
+    - privateKey: 用户私钥 | 必填 |
+    - requestId: createTokenTxData返回的requestId | 必填 |
+    - signture: 签名 | 必填 | 使用代理则由代理完成签名
 }
 - response
 ```
@@ -274,11 +274,11 @@ secKey是用户密钥
 - path: api/signAndSubmitTokenDeploy
 - method: POST
 - data: {
-    apiKey: 用户apiKey | 必填
-    chain: 链 | 必填 | CHATNS
-    signdTxData: 签名后事物数据 | 必填 |
-    requestId: createTokenTxData返回的requestId | 必填 |
-    signture: 签名 | 必填 | 使用代理则由代理完成签名
+    - apiKey: 用户apiKey | 必填
+    - chain: 链 | 必填 | CHATNS
+    - signdTxData: 签名后事物数据 | 必填 |
+    - requestId: createTokenTxData返回的requestId | 必填 |
+    - signture: 签名 | 必填 | 使用代理则由代理完成签名
 }
 - response
 ```
