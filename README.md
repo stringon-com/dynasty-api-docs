@@ -396,7 +396,7 @@ secKey是用户密钥
     status: SUBMIT_TOKEN_TO_CHAIN
     description: 'submit token transaction to chain'
     txid
-    requestId: 转账id,
+    requestId: 提交id,
     requestBody: 请求参数
 }
 ```
@@ -407,7 +407,7 @@ secKey是用户密钥
     status: SUBMIT_TOKEN_ERROR
     description: 'submit token transaction to chain error'
     error: 
-    requestId: 转账id,
+    requestId: 提交id,
     requestBody: 请求参数
 }
 ```
@@ -418,7 +418,7 @@ secKey是用户密钥
     status: SUBMIT_TOKEN_ON_CHAIN_ERROR
     description: 'submit transfer transaction error from chain'
     error:
-    requestId: 转账id,
+    requestId: 提交id,
 }
 ```
 
@@ -428,7 +428,7 @@ secKey是用户密钥
     status: SUBMIT_TOKEN_ON_CHAIN
     description: 'submit token transaction error from chain'
     tokenData:
-    requestId: 转账id,
+    requestId: 提交id,
 }
 ```
 
@@ -439,6 +439,6 @@ secKey是用户密钥
     description: 'submit token transaction confirm'
     txid:
     confirmedNum:
-    requestId: 转账id,
+    requestId: 提交id,
 }
 ```
